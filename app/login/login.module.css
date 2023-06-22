@@ -1,0 +1,126 @@
+.main{
+
+    margin-top: 200px;
+    width: max-content;
+  /* margin: 0 auto;  */
+  /* background-color:aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 250px; */
+  align-self: center;
+  
+
+}
+
+.mainform{
+
+
+}
+
+@font-face {
+  font-family: "Glot";
+  src: url("/home/thesilentguy/.local/share/fonts/FontsFree-Net-Glot-Round-Medium.ttf");
+}
+
+.login{
+    display: flex;
+    
+    color: #575559;
+    font-family: monospace;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.name{
+  height: 40px;
+  width: 350px;
+  margin-bottom: 10px;
+  border: 0;
+  outline: 0;
+  /* border-bottom: 1px solid rgba(85,86,88,0.5); */
+  background: transparent;
+  color:#575559;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.name:focus{
+  color:#575559;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.password{
+  height: 40px;
+  width: 350px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 10px;
+  /* border-bottom: 1px solid rgba(85,86,88,0.5); */
+  background: transparent;
+  color:#575559;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+
+.password:focus{
+  color:#575559;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.name::placeholder{
+  color:#575559;
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 550;
+}
+.password::placeholder{
+  color:#575559;
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.nameborder{
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid rgba(85,86,88,0.3);
+  background: transparent;
+  margin-bottom: 35px;
+
+}
+.passborder{
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid rgba(85,86,88,0.3);
+  background: transparent;
+  margin-bottom: 35px;
+}
+
+.loginbutton{
+  height: 55px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  outline: 0;
+  border: 0;
+  background-image:linear-gradient(to right,#4a555e,#2a353d);
+  border-radius: 40px;
+  
+}
+
+.loginbutton:hover{
+  transition: .5s;
+  background-image:linear-gradient(to left,#4a555e,#2a353d);
+
+}
