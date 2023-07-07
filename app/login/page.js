@@ -7,7 +7,9 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { useReducer } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 function Login() {
+  const { data: session, status } = useSession();
   const router = useRouter();
   const [state, dispatch] = useReducer(reducer, {
     username: null,
@@ -34,16 +36,7 @@ function Login() {
 
   async function submitHandler(event) {
     event.preventDefault();
-    // console.log(state.username, state.password);
-    // const promise = await fetch("/api/login", {
-    //   method: "POST",
-    //   body: JSON.stringify(state),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-    // const data = await promise.json();
-    // console.log(data);
+
     const username = state.username;
     const password = state.password;
     const result = await signIn("credentials", {
@@ -52,8 +45,8 @@ function Login() {
       redirect: false,
       // callbackUrl: "/admin",
     });
-    if (!result.error) {
-      router.push("/");
+    if (!result.error && status === "authenticated") {
+      router.push("/admin");
     }
   }
 

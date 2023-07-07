@@ -6,6 +6,8 @@ import { signIn, signOut, useSession } from "next-auth/react";
 export default function Home() {
   const { data: session, status } = useSession();
 
+  console.log(session?.user,status)
+
   if (status === "loading") return null;
 
   return (

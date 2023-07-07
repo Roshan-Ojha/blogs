@@ -1,0 +1,75 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: monospace;
+    background-color: white;
+    padding: 55px 10px 10px 10px;
+    margin-top: 100px;
+}
+
+.createblog{
+    font-size: 25px;
+    font-weight: bold;
+    align-self: center
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+ .title label, .bodytitle{
+    font-size: 15px;
+    font-weight: bold;
+ }
+ .bodytitle{
+    margin-bottom: ;
+ }
+
+.titleinput{
+    height: 50px;
+    border: 1px solid rgba(87,85,89,0.5);
+}
+
+.titleinput:focus{
+    /* border: 1px solid rgba(87,85,89,0.5); */
+    border: none;
+}
+
+.formstyle{
+    display: flex;
+    flex-direction: column;
+}
+.choosephoto{
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+
+.file{
+    align-self: flex-end;
+}
+
+.submit{
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #275985;
+    color: white;
+    border-radius: 5px;
+}
+
+.submit:hover{
+    background-color: white;
+    color: #275985;
+    border: 1px solid #275985;
+
+}
