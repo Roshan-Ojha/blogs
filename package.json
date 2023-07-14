@@ -29,6 +29,7 @@
     "@progress/kendo-theme-default": "^6.4.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "mongodb": "^5.7.0",
     "next": "13.4.7",
     "next-auth": "^4.22.1",
     "react": "18.2.0",
