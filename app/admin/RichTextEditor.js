@@ -52,17 +52,27 @@ function RichText() {
     [Undo, Redo],
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(richtext);
-    console.log(file);
+
+    const formData = new FormData()
+    formData.append('title',title)
+    formData.append('body',richtext)
+    formData.append('file',file)
+
+    console.log(formData)
+
+    const promise = await fetch("http://localhost:3000/api/setblog", {
+      method: 'POST',
+      
+      body:formData
+    })
+
+    const response = await promise.json();
+    console.log(response);
     
   };
 
-  const getFile = (e) => {
-    const photo = e.target.files[0];
-    setFile(photo);
-  };
 
   return (
     <div>
@@ -89,7 +99,7 @@ function RichText() {
           />
 
           <div className={style.file}>
-            <button
+            <button type="button"
               onClick={() => submitref.current.click()}
               className={style.choosephoto}
             >
@@ -101,7 +111,7 @@ function RichText() {
               accept="image/png,image/jpeg"
               style={{ display: "none" }}
               ref={submitref}
-              onChange={getFile}
+              onChange={(e)=>setFile(e.target.files[0])}
             ></input>
           </div>
 
