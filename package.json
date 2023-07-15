@@ -27,14 +27,17 @@
     "@progress/kendo-react-progressbars": "^5.14.1",
     "@progress/kendo-react-treeview": "^5.14.1",
     "@progress/kendo-theme-default": "^6.4.0",
+    "@trendyol-js/react-carousel": "^3.0.2",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "html-react-parser": "^4.0.0",
     "mongodb": "^5.7.0",
     "next": "13.4.7",
     "next-auth": "^4.22.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.4",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "zustand": "^4.3.9"
   }
 }

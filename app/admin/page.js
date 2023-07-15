@@ -11,17 +11,17 @@ function Admin() {
   const { data: session, status } = useSession();
   const route = useRouter();
 
-  // if (status === "loading") {
-  //   return <p>Loading ...</p>;
-  // } else if (status === "unauthenticated") {
-  //   route.push("/login");
-  // } else {
-  return (
-    <div>
-      <RichText></RichText>
-    </div>
-  );
-  // }
+  if (status === "loading") {
+    return <p>Loading ...</p>;
+  } else if (status === "unauthenticated") {
+    route.push("/login");
+  } else {
+    return (
+      <div>
+        <RichText></RichText>
+      </div>
+    );
+  }
 }
 
 export default Admin;

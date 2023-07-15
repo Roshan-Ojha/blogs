@@ -47,7 +47,7 @@ function RichText() {
     [NumberedList, BulletedList],
     FontSize,
 
-    FormatBlock,
+    FormatBlock, 
 
     [Undo, Redo],
   ];
@@ -62,7 +62,7 @@ function RichText() {
 
     console.log(formData)
 
-    const promise = await fetch("http://localhost:3000/api/setblog", {
+    const promise = await fetch("/api/setblog", {
       method: 'POST',
       
       body:formData

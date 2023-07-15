@@ -1,31 +1,42 @@
-import { Carousel } from 'react-responsive-carousel';
 
+import "react-multi-carousel/lib/styles.css";
+import parse from "html-react-parser"
 import { useEffect, useState } from "react";
+
+import style from "./blog.module.css"
 
 function Blog(props){
 
+
+
+     
+      
   
     console.log(props.blog.fetchedData)
     return(
-        <div>
-            {props.blog.fetchedData&&<Carousel>
+        <div className={style.mainblog}>
+    
 
-                {/* <div>muji k vairacha</div> */}
+                
                 
             {
                 props.blog.fetchedData?.map((blog,index)=>{
-                    return(
-                        <div key={index} style={{width:"300px"}}>
-                            <img src={blog.image}></img>
-                            <div>
-                                {blog.title}
+                    return( 
+                        <div className={style.blog} key={index} onClick={()=>props.selectIndex(index)} >
+                            <div className={style.img}><img className={style.imges}    src={blog.image}></img></div>
+                            <div className={style.right}>
+                                <div className={style.title}>{blog.title}</div>
+                               
+                                {/* <div dangerouslySetInnerHTML={{ __html: blog.body }} /> */}
+                                <div className={style.body}>{parse(blog.body)}</div>
                             </div>
                         </div>
                     );
                 })
             }
 
-            </Carousel>}
+           
+
         </div>
     );
 }

@@ -1,0 +1,28 @@
+.main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1000px;
+    margin-top: 100px;
+    padding: 5px;
+    background-color: aliceblue;
+}
+
+.imagebody{
+    width: 100%;
+    margin-bottom: 20px;
+   
+}
+.imagebody img{
+    width: 100%;
+    object-fit:fill
+}
+
+.title{
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    color: #404040;
+}
